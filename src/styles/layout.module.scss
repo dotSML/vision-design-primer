@@ -1,0 +1,47 @@
+@import "./variables.scss";
+
+.app {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $grey;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+}
+
+.logo {
+  z-index: 2000;
+  margin-left: 100px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+  height: 75px;
+  width: 75px;
+}
+
+.mainBody {
+  display: flex;
+}
+
+.leftContent {
+  display: flex;
+  height: 100%;
+  flex-basis: 60%;
+  flex-direction: column;
+}
+
+.rightContent {
+  display: flex;
+  height: 100%;
+  flex-basis: 40%;
+  margin-top: 50px;
+  padding: 0 20px;
+  flex-direction: column;
+  color: #fff;
+}

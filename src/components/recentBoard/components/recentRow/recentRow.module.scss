@@ -1,0 +1,47 @@
+@import "../../../../styles/variables";
+
+.container {
+  width: 100%;
+  font-weight: 600;
+  font-size: 18px;
+
+  &:not(last-child) {
+    margin-bottom: 5px;
+  }
+}
+
+.sequenceBox {
+  display: flex;
+  min-width: 30px;
+  color: #757575;
+  justify-content: flex-end;
+  margin-right: 5px;
+}
+
+.winnerBox {
+  display: flex;
+  justify-content: center;
+  color: $green;
+  margin-right: 5px;
+}
+
+.loserBox {
+  color: $red;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.resultBox {
+  color: $white;
+  margin-right: 5px;
+}
+
+.beatsBox {
+  font-weight: bold !important;
+  color: #fff !important;
+}
+
+.timeBox {
+  color: #757575;
+  font-weight: 600;
+}
