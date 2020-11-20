@@ -1,8 +1,14 @@
 import React from "react";
 import styles from "./footer.module.scss";
-import { Flex, ButtonPrimary, Button, SubNav } from "@primer/components";
+import {
+  Flex,
+  ButtonPrimary,
+  Button,
+  SubNav,
+  Dropdown,
+} from "@primer/components";
 
-export const Footer = () => {
+export const Footer = ({ handleThemeChange, theme }) => {
   return (
     <footer className={styles.container}>
       <SubNav aria-label="Main">
@@ -21,6 +27,20 @@ export const Footer = () => {
           </SubNav.Link>
         </SubNav.Links>
       </SubNav>
+      <Flex>
+        <Button
+          sx={{
+            backgroundColor: theme ? "#000" : "#fff",
+            color: theme ? "#fff" : "#000",
+            ":hover": {
+              backgroundColor: theme ? "#000" : "#fff",
+            },
+          }}
+          onClick={() => handleThemeChange()}
+        >
+          {theme ? "Dark" : "Light"} mode
+        </Button>
+      </Flex>
       <Flex>
         <ButtonPrimary marginRight={2}>START A NEW MATCH</ButtonPrimary>
         <Button>STATISTICS</Button>
